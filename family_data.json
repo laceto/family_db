@@ -1,0 +1,140 @@
+{
+    "Attivit\u00e0 Familiari": [
+        {
+            "Nome Evento": "Serata di Giochi in Famiglia",
+            "Data": "2023-10-15",
+            "Ora": "18:00",
+            "Luogo": "Soggiorno",
+            "Partecipanti": [
+                "Alice",
+                "Bob",
+                "Charlie"
+            ],
+            "Descrizione": "Giochi da tavolo e snack.",
+            "Ricorrenza": "Mensile",
+            "Note": "Portare il proprio gioco da tavolo preferito!"
+        },
+        {
+            "Nome Evento": "baby karate",
+            "Data": "03/10/2025",
+            "Ora": "",
+            "Luogo": "pro patria",
+            "Partecipanti": [
+                "Niccolo\u00f2"
+            ],
+            "Descrizione": "primo allenamento  di Niccol\u00f2 di baby karate. \u00e8 uscito molto contento",
+            "Ricorrenza": "",
+            "Note": ""
+        }
+    ],
+    "Inventario della Casa": [
+        {
+            "Nome Oggetto": "Divano",
+            "Categoria": "Mobili",
+            "Quantit\u00e0": 1,
+            "Condizione": "Buona",
+            "Posizione": "Soggiorno",
+            "Data di Acquisto": "2020-05-10",
+            "Note": "Pelle, 3 posti."
+        }
+    ],
+    "Inventario di Cibo e Generi Alimentari": [
+        {
+            "Nome Oggetto": "Latte",
+            "Categoria": "Latticini",
+            "Quantit\u00e0": 2,
+            "Data di Scadenza": "2023-11-01",
+            "Note": "Latte al 2%, biologico."
+        }
+    ],
+    "Faccende e Responsabilit\u00e0": [
+        {
+            "Nome Compito": "Pulire la Cucina",
+            "Membro della Famiglia Assegnato": "Alice",
+            "Frequenza": "Settimanale",
+            "Data di Scadenza": "2023-10-20",
+            "Stato": "In Attesa",
+            "Note": "Concentrarsi su piatti e piani di lavoro."
+        }
+    ],
+    "Documenti Familiari": [
+        {
+            "Nome Documento": "Certificato di Nascita - Alice",
+            "Tipo": "Legale",
+            "Data di Creazione": "2010-04-15",
+            "Proprietario": "Alice",
+            "Posizione": "Armadio dei Documenti",
+            "Note": "Tenere in un luogo sicuro."
+        }
+    ],
+    "Contatti Importanti": [
+        {
+            "Nome": "Dott. Smith",
+            "Relazione": "Medico di Famiglia",
+            "Numero di Telefono": "555-1234",
+            "Email": "dr.smith@example.com",
+            "Indirizzo": "123 Health St, Wellness City",
+            "Note": "Pianificare il controllo annuale."
+        }
+    ],
+    "Tradizioni Familiari": [
+        {
+            "Nome Tradizione": "Cena di Ringraziamento",
+            "Descrizione": "Riunire la famiglia per un grande banchetto.",
+            "Frequenza": "Annuale",
+            "Note": "Ognuno porta un piatto."
+        }
+    ],
+    "Obiettivi e Progetti Familiari": [
+        {
+            "Nome Obiettivo/Progetto": "Ristrutturazione della Casa",
+            "Descrizione": "Ristrutturare la cucina e i bagni.",
+            "Membro della Famiglia Assegnato(i)": "Bob, Charlie",
+            "Data di Inizio": "2023-11-01",
+            "Data di Fine": "2024-03-01",
+            "Stato": "In Corso",
+            "Note": "Budget: $10,000."
+        }
+    ],
+    "Cura degli Animali Domestici": [
+        {
+            "Nome Animale": "Buddy",
+            "Tipo": "Cane",
+            "Razza": "Golden Retriever",
+            "Et\u00e0": "5 anni",
+            "Istruzioni di Cura": "Portare a passeggio due volte al giorno, nutrirlo due volte al giorno.",
+            "Contatto Veterinario": "555-5678",
+            "Note": "Ha bisogno di toelettatura ogni mese."
+        }
+    ],
+    "Informazioni di Emergenza": [
+        {
+            "Tipo Emergenza": "Incendio",
+            "Descrizione Piano": "Evacuare verso l'uscita pi\u00f9 vicina.",
+            "Numeri di Contatto": "911",
+            "Posizione delle Forniture": "Cassetto della Cucina",
+            "Note": "Controllare i rilevatori di fumo mensilmente."
+        }
+    ],
+    "Cartelle Sanitarie Familiari": [
+        {
+            "Nome Membro della Famiglia": "Bob",
+            "Condizione Sanitaria": "Asma",
+            "Medicina": "Inalatore",
+            "Medico": "Dott. Smith",
+            "Date degli Appuntamenti": "2023-09-15",
+            "Note": "Portare sempre l'inalatore."
+        }
+    ],
+    "Piani di Viaggio": [
+        {
+            "Destinazione": "Florida",
+            "Date": "2024-07-01 a 2024-07-10",
+            "Alloggio": "Resort sulla Spiaggia",
+            "Trasporto": "Volo",
+            "Itinerario": "Visita ai parchi a tema e alle spiagge.",
+            "Lista di Cose da Portare": "Crema solare, costumi da bagno, cappelli",
+            "Note": "Prenotare i biglietti in anticipo."
+        }
+    ]
+}
