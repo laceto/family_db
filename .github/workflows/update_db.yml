@@ -29,14 +29,10 @@ jobs:
           # For example, you can run a Python script that modifies the file.  
           python update_family_data.py  # Adjust to your script name  
 
-      - name: Commit Changes  
-        run: |  
-          git config --local user.email "your_email@example.com"  
-          git config --local user.name "Your Name"  
-          git add family_data.json  
-          git commit -m "Update family_data.json" || echo "No changes to commit"  
-
-      - name: Push Changes  
-        run: git push  
-        env:  
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub Actions  
+      - name: Commit results
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Results from py script" || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
