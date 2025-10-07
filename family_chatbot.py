@@ -1,7 +1,10 @@
 import streamlit as st  
 import json  
 import os  
-  
+import aiofiles  
+import asyncio  
+from datetime import datetime  
+
 # Definire la struttura del database familiare  
 struttura_database_familiare = {  
     "Attività Familiari": {  
@@ -69,14 +72,13 @@ struttura_database_familiare = {
         "Stato": str,  
         "Note": str  
     },  
-    "Cura degli Animali Domestici": {  
-        "Nome Animale": str,  
-        "Tipo": str,  
-        "Razza": str,  
-        "Età": str,  
-        "Istruzioni di Cura": str,  
-        "Contatto Veterinario": str,  
-        "Note": str  
+    "Nuove Attività Fatte da Niccolò": {  
+        "Nome Attività": str,  
+        "Data": str,  
+        "Descrizione": str,  
+        "Tempo Impiegato": int,  
+        "Note": str,  
+        "Completata": str  
     },  
     "Informazioni di Emergenza": {  
         "Tipo Emergenza": str,  
@@ -101,56 +103,158 @@ struttura_database_familiare = {
         "Itinerario": str,  
         "Lista di Cose da Portare": str,  
         "Note": str  
+    },  
+    "Attività di Trading": {  
+        "Simbolo": str,  
+        "Data del Trade": str,  
+        "Tipo": str,  
+        "Ragione del Trade": str,  
+        "Quantità": int,  
+        "Prezzo di Ingresso": float,  
+        "Prezzo di Uscita": float,  
+        "Profitto/Perdita": float,  
+        "Note": str  
+    },  
+    "Progetti IT": {  
+        "Nome Progetto": str,  
+        "Descrizione": str,  
+        "Tecnologie": list,  
+        "Data di Inizio": str,  
+        "Data di Fine": str,  
+        "Stato": str,  
+        "Obiettivo": str,  
+        "Risultati": str,  
+        "Repository": str,  
+        "Note": str  
+    },  
+    "Note Libere": {  
+        "Titolo Nota": str,  
+        "Data": str,  
+        "Testo": str,  
+        "Tag": list,  
+        "Note Aggiuntive": str  
     }  
 }  
-  
-# Caricare i dati esistenti dal file JSON  
-def load_data():  
+
+# Helper function to validate date format (DD/MM/YYYY)  
+def is_valid_date(date_str):  
+    try:  
+        datetime.strptime(date_str, "%d/%m/%Y")  
+        return True  
+    except ValueError:  
+        return False  
+
+# Helper function to validate inputs based on field type and category  
+def validate_entries(entries, categoria):  
+    errors = []  
+    for field, field_type in struttura_database_familiare[categoria].items():  
+        value = entries[field]  
+        
+        # Check for required string fields (non-empty)  
+        if field_type == str and field in ["Nome Evento", "Nome Oggetto", "Nome Compito", "Nome Documento",  
+                                          "Nome", "Nome Tradizione", "Nome Obiettivo/Progetto", "Nome Attività",  
+                                          "Tipo Emergenza", "Nome Membro della Famiglia", "Destinazione", "Simbolo",  
+                                          "Nome Progetto", "Titolo Nota", "Testo"]:  
+            if not value.strip():  
+                errors.append(f"Il campo '{field}' è obbligatorio e non può essere vuoto.")  
+        
+        # Validate integer fields (non-negative)  
+        if field_type == int and value < 0:  
+            errors.append(f"Il campo '{field}' deve essere un numero non negativo.")  
+        
+        # Validate float fields (for prices, ensure non-negative; profit/loss can be negative)  
+        if field_type == float:  
+            try:  
+                value = float(value)  
+            except ValueError:  
+                errors.append(f"Il campo '{field}' deve essere un numero valido.")  
+            if "Prezzo" in field and value < 0:  
+                errors.append(f"Il campo '{field}' deve essere un valore non negativo.")  
+        
+        # Validate date fields  
+        if field_type == str and "Data" in field and value.strip() and not is_valid_date(value):  
+            errors.append(f"Il campo '{field}' deve essere una data valida nel formato GG/MM/AAAA.")  
+        
+        # Validate list fields (non-empty after splitting)  
+        if field_type == list and value.strip():  
+            items = [item.strip() for item in value.split(",")]  
+            if not any(items):  
+                errors.append(f"Il campo '{field}' contiene valori non validi.")  
+            entries[field] = items  # Update entries with processed list  
+        
+        # Validate Tipo in Trading (short or long)  
+        if field == "Tipo" and value.strip().lower() not in ["short", "long"]:  
+            errors.append(f"Il campo 'Tipo' deve essere 'short' o 'long'.")  
+        
+    return errors  
+
+# Asynchronous function to load data from JSON file  
+async def load_data():  
     if os.path.exists("family_data.json"):  
-        with open("family_data.json", "r") as f:  
-            return json.load(f)  
+        async with aiofiles.open("family_data.json", "r") as f:  
+            content = await f.read()  
+            return json.loads(content)  
     return {categoria: [] for categoria in struttura_database_familiare}  
-  
-# Salvare i dati nel file JSON  
-def save_data(data):  
-    with open("family_data.json", "w") as f:  
-        json.dump(data, f, indent=4)  
-  
-# App principale di Streamlit  
-def main():  
+
+# Asynchronous function to save data to JSON file  
+async def save_data(data):  
+    async with aiofiles.open("family_data.json", "w") as f:  
+        await f.write(json.dumps(data, indent=4))  
+
+# Cache the async load_data to integrate with Streamlit  
+@st.cache_data  
+def cached_load_data(_loop):  
+    return _loop.run_until_complete(load_data())  
+
+# App principale di Streamlit (asynchronous)  
+async def main():  
     st.title("Ingresso Database Familiare")  
-  
-    # Caricare i dati esistenti  
-    family_data = load_data()  
-  
+
+    # Get the current event loop  
+    loop = asyncio.get_event_loop()  
+
+    # Load data using cached function  
+    family_data = cached_load_data(loop)  
+
     # Selezionare la categoria per l'ingresso  
     categoria = st.selectbox("Seleziona una categoria per inserire dati:", list(struttura_database_familiare.keys()))  
-  
+
     # Creare un modulo di ingresso in base alla categoria selezionata  
     with st.form(key='entry_form'):  
         entries = {}  
-        for field in struttura_database_familiare[categoria].keys():  
-            if struttura_database_familiare[categoria][field] == list:  
+        for field, field_type in struttura_database_familiare[categoria].items():  
+            if field_type == list:  
                 entries[field] = st.text_area(field + " (separati da virgola)", "")  
-            elif struttura_database_familiare[categoria][field] == int:  
-                entries[field] = st.number_input(field, min_value=0)  
+            elif field_type == int:  
+                entries[field] = st.number_input(field, min_value=0, step=1)  
+            elif field_type == float:  
+                entries[field] = st.number_input(field, step=0.01)  
             else:  
                 entries[field] = st.text_input(field)  
-  
+
         submit_button = st.form_submit_button(label="Invia")  
-  
+
         if submit_button:  
-            # Elaborare le voci  
-            if entries['Partecipanti']:  
-                entries['Partecipanti'] = [name.strip() for name in entries['Partecipanti'].split(',')]  
-            family_data[categoria].append(entries)  
-            save_data(family_data)  
-            st.success("Voce aggiunta con successo!")  
-  
+            # Validare le voci  
+            errors = validate_entries(entries, categoria)  
+            if errors:  
+                for error in errors:  
+                    st.error(error)  
+            else:  
+                # Elaborare le voci per i campi di tipo lista  
+                for field, field_type in struttura_database_familiare[categoria].items():  
+                    if field_type == list and entries[field]:  
+                        entries[field] = [name.strip() for name in entries[field].split(',')]  
+                family_data[categoria].append(entries)  
+                # Save data asynchronously  
+                await save_data(family_data)  
+                st.success("Voce aggiunta con successo!")  
+
     # Visualizzare le voci esistenti per la categoria selezionata  
     st.write("### Voci Esistenti")  
     for entry in family_data[categoria]:  
         st.write(entry)  
-  
+
 if __name__ == "__main__":  
-    main()  
+    # Run the async main function  
+    asyncio.run(main())  
