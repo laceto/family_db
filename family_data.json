@@ -25,6 +25,19 @@
             "Descrizione": "primo allenamento  di Niccol\u00f2 di baby karate. \u00e8 uscito molto contento",
             "Ricorrenza": "",
             "Note": ""
+        },
+        {
+            "Nome Evento": "Nuovo Evento",
+            "Data": "2023-11-01",
+            "Ora": "19:00",
+            "Luogo": "Giardino",
+            "Partecipanti": [
+                "Alice",
+                "Bob"
+            ],
+            "Descrizione": "Una nuova descrizione.",
+            "Ricorrenza": "Una volta",
+            "Note": "Note aggiuntive."
         }
     ],
     "Inventario della Casa": [
