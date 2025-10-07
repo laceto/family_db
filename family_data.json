@@ -1,21 +1,38 @@
 {
-    "Attività Familiari": [
+    "Attivit\u00e0 Familiari": [
         {
             "Nome Evento": "Cena di famiglia",
             "Data": "07/10/2025",
             "Ora": "19:30",
             "Luogo": "Casa",
-            "Partecipanti": ["Mamma", "Papà", "Niccolò"],
+            "Partecipanti": [
+                "Mamma",
+                "Pap\u00e0",
+                "Niccol\u00f2"
+            ],
             "Descrizione": "Cena con lasagne fatte in casa.",
             "Ricorrenza": "Settimanale",
-            "Note": "Niccolò ha aiutato a mescolare la salsa."
+            "Note": "Niccol\u00f2 ha aiutato a mescolare la salsa."
+        },
+        {
+            "Nome Evento": "Nuovo Evento",
+            "Data": "2023-11-01",
+            "Ora": "19:00",
+            "Luogo": "Giardino",
+            "Partecipanti": [
+                "Alice",
+                "Bob"
+            ],
+            "Descrizione": "Una nuova descrizione.",
+            "Ricorrenza": "Una volta",
+            "Note": "Note aggiuntive."
         }
     ],
     "Inventario della Casa": [
         {
             "Nome Oggetto": "Laptop",
             "Categoria": "Elettronica",
-            "Quantità": 1,
+            "Quantit\u00e0": 1,
             "Condizione": "Buona",
             "Posizione": "Studio",
             "Data di Acquisto": "15/03/2024",
@@ -26,15 +43,15 @@
         {
             "Nome Oggetto": "Pasta",
             "Categoria": "Dispensa",
-            "Quantità": 5,
+            "Quantit\u00e0": 5,
             "Data di Scadenza": "30/06/2026",
             "Note": "Spaghetti Barilla."
         }
     ],
-    "Faccende e Responsabilità": [
+    "Faccende e Responsabilit\u00e0": [
         {
             "Nome Compito": "Pulizia cucina",
-            "Membro della Famiglia Assegnato": "Papà",
+            "Membro della Famiglia Assegnato": "Pap\u00e0",
             "Frequenza": "Giornaliera",
             "Data di Scadenza": "07/10/2025",
             "Stato": "Completato",
@@ -43,10 +60,10 @@
     ],
     "Documenti Familiari": [
         {
-            "Nome Documento": "Passaporto Niccolò",
-            "Tipo": "Documento d'identità",
+            "Nome Documento": "Passaporto Niccol\u00f2",
+            "Tipo": "Documento d'identit\u00e0",
             "Data di Creazione": "01/09/2023",
-            "Proprietario": "Niccolò",
+            "Proprietario": "Niccol\u00f2",
             "Posizione": "Cassaforte",
             "Note": "Valido fino al 2028."
         }
@@ -58,7 +75,7 @@
             "Numero di Telefono": "+39 123 456 7890",
             "Email": "rossi@studio.it",
             "Indirizzo": "Via Medici 10, Milano",
-            "Note": "Pediatra di Niccolò."
+            "Note": "Pediatra di Niccol\u00f2."
         }
     ],
     "Tradizioni Familiari": [
@@ -66,28 +83,28 @@
             "Nome Tradizione": "Pizza del sabato",
             "Descrizione": "Preparare la pizza in casa ogni sabato sera.",
             "Frequenza": "Settimanale",
-            "Note": "Niccolò sceglie i condimenti."
+            "Note": "Niccol\u00f2 sceglie i condimenti."
         }
     ],
     "Obiettivi e Progetti Familiari": [
         {
             "Nome Obiettivo/Progetto": "Risparmio per vacanza",
-            "Descrizione": "Mettere da parte 2000€ per una vacanza estiva.",
-            "Membro della Famiglia Assegnato(i)": "Mamma, Papà",
+            "Descrizione": "Mettere da parte 2000\u20ac per una vacanza estiva.",
+            "Membro della Famiglia Assegnato(i)": "Mamma, Pap\u00e0",
             "Data di Inizio": "01/01/2025",
             "Data di Fine": "31/12/2025",
             "Stato": "In corso",
             "Note": "Controllare il budget mensile."
         }
     ],
-    "Nuove Attività Fatte da Niccolò": [
+    "Nuove Attivit\u00e0 Fatte da Niccol\u00f2": [
         {
-            "Nome Attività": "Disegno di una nave",
+            "Nome Attivit\u00e0": "Disegno di una nave",
             "Data": "07/10/2025",
-            "Descrizione": "Niccolò ha disegnato una nave pirata con pastelli.",
+            "Descrizione": "Niccol\u00f2 ha disegnato una nave pirata con pastelli.",
             "Tempo Impiegato": 45,
             "Note": "Usato colori blu e rosso.",
-            "Completata": "Sì"
+            "Completata": "S\u00ec"
         }
     ],
     "Informazioni di Emergenza": [
@@ -101,7 +118,7 @@
     ],
     "Cartelle Sanitarie Familiari": [
         {
-            "Nome Membro della Famiglia": "Niccolò",
+            "Nome Membro della Famiglia": "Niccol\u00f2",
             "Condizione Sanitaria": "Nessuna",
             "Medicina": "Nessuna",
             "Medico": "Dr. Rossi",
@@ -120,13 +137,13 @@
             "Note": "Prenotare biglietti museo in anticipo."
         }
     ],
-    "Attività di Trading": [
+    "Attivit\u00e0 di Trading": [
         {
             "Simbolo": "TSLA",
             "Data del Trade": "07/10/2025",
             "Tipo": "long",
             "Ragione del Trade": "Forte crescita prevista dopo lancio prodotto.",
-            "Quantità": 20,
+            "Quantit\u00e0": 20,
             "Prezzo di Ingresso": 250.75,
             "Prezzo di Uscita": 0.0,
             "Profitto/Perdita": 0.0,
@@ -137,7 +154,11 @@
         {
             "Nome Progetto": "Algo Trading Bot",
             "Descrizione": "Sviluppare un bot per trading automatico usando Python e Databricks.",
-            "Tecnologie": ["Python", "Pandas", "Databricks"],
+            "Tecnologie": [
+                "Python",
+                "Pandas",
+                "Databricks"
+            ],
             "Data di Inizio": "01/10/2025",
             "Data di Fine": "",
             "Stato": "In corso",
@@ -152,7 +173,11 @@
             "Titolo Nota": "Idea per trading",
             "Data": "07/10/2025",
             "Testo": "Esplorare l'uso di LLM per prevedere trend di mercato basati su news.",
-            "Tag": ["trading", "LLM", "ricerca"],
+            "Tag": [
+                "trading",
+                "LLM",
+                "ricerca"
+            ],
             "Note Aggiuntive": "Studiare LangChain per integrazione."
         }
     ]
