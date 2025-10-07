@@ -52,6 +52,19 @@
             "Descrizione": "Una nuova descrizione.",
             "Ricorrenza": "Una volta",
             "Note": "Note aggiuntive."
+        },
+        {
+            "Nome Evento": "Nuovo Evento",
+            "Data": "2023-11-01",
+            "Ora": "19:00",
+            "Luogo": "Giardino",
+            "Partecipanti": [
+                "Alice",
+                "Bob"
+            ],
+            "Descrizione": "Una nuova descrizione.",
+            "Ricorrenza": "Una volta",
+            "Note": "Note aggiuntive."
         }
     ],
     "Inventario della Casa": [
