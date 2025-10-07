@@ -1,153 +1,159 @@
 {
-    "Attivit\u00e0 Familiari": [
+    "Attività Familiari": [
         {
-            "Nome Evento": "Serata di Giochi in Famiglia",
-            "Data": "2023-10-15",
-            "Ora": "18:00",
-            "Luogo": "Soggiorno",
-            "Partecipanti": [
-                "Alice",
-                "Bob",
-                "Charlie"
-            ],
-            "Descrizione": "Giochi da tavolo e snack.",
-            "Ricorrenza": "Mensile",
-            "Note": "Portare il proprio gioco da tavolo preferito!"
-        },
-        {
-            "Nome Evento": "baby karate",
-            "Data": "03/10/2025",
-            "Ora": "",
-            "Luogo": "pro patria",
-            "Partecipanti": [
-                "Niccolo\u00f2"
-            ],
-            "Descrizione": "primo allenamento  di Niccol\u00f2 di baby karate. \u00e8 uscito molto contento",
-            "Ricorrenza": "",
-            "Note": ""
-        },
-        {
-            "Nome Evento": "Nuovo Evento",
-            "Data": "2023-11-01",
-            "Ora": "19:00",
-            "Luogo": "Giardino",
-            "Partecipanti": [
-                "Alice",
-                "Bob"
-            ],
-            "Descrizione": "Una nuova descrizione.",
-            "Ricorrenza": "Una volta",
-            "Note": "Note aggiuntive."
+            "Nome Evento": "Cena di famiglia",
+            "Data": "07/10/2025",
+            "Ora": "19:30",
+            "Luogo": "Casa",
+            "Partecipanti": ["Mamma", "Papà", "Niccolò"],
+            "Descrizione": "Cena con lasagne fatte in casa.",
+            "Ricorrenza": "Settimanale",
+            "Note": "Niccolò ha aiutato a mescolare la salsa."
         }
     ],
     "Inventario della Casa": [
         {
-            "Nome Oggetto": "Divano",
-            "Categoria": "Mobili",
-            "Quantit\u00e0": 1,
+            "Nome Oggetto": "Laptop",
+            "Categoria": "Elettronica",
+            "Quantità": 1,
             "Condizione": "Buona",
-            "Posizione": "Soggiorno",
-            "Data di Acquisto": "2020-05-10",
-            "Note": "Pelle, 3 posti."
+            "Posizione": "Studio",
+            "Data di Acquisto": "15/03/2024",
+            "Note": "Usato per progetti IT e trading."
         }
     ],
     "Inventario di Cibo e Generi Alimentari": [
         {
-            "Nome Oggetto": "Latte",
-            "Categoria": "Latticini",
-            "Quantit\u00e0": 2,
-            "Data di Scadenza": "2023-11-01",
-            "Note": "Latte al 2%, biologico."
+            "Nome Oggetto": "Pasta",
+            "Categoria": "Dispensa",
+            "Quantità": 5,
+            "Data di Scadenza": "30/06/2026",
+            "Note": "Spaghetti Barilla."
         }
     ],
-    "Faccende e Responsabilit\u00e0": [
+    "Faccende e Responsabilità": [
         {
-            "Nome Compito": "Pulire la Cucina",
-            "Membro della Famiglia Assegnato": "Alice",
-            "Frequenza": "Settimanale",
-            "Data di Scadenza": "2023-10-20",
-            "Stato": "In Attesa",
-            "Note": "Concentrarsi su piatti e piani di lavoro."
+            "Nome Compito": "Pulizia cucina",
+            "Membro della Famiglia Assegnato": "Papà",
+            "Frequenza": "Giornaliera",
+            "Data di Scadenza": "07/10/2025",
+            "Stato": "Completato",
+            "Note": "Fatto dopo cena."
         }
     ],
     "Documenti Familiari": [
         {
-            "Nome Documento": "Certificato di Nascita - Alice",
-            "Tipo": "Legale",
-            "Data di Creazione": "2010-04-15",
-            "Proprietario": "Alice",
-            "Posizione": "Armadio dei Documenti",
-            "Note": "Tenere in un luogo sicuro."
+            "Nome Documento": "Passaporto Niccolò",
+            "Tipo": "Documento d'identità",
+            "Data di Creazione": "01/09/2023",
+            "Proprietario": "Niccolò",
+            "Posizione": "Cassaforte",
+            "Note": "Valido fino al 2028."
         }
     ],
     "Contatti Importanti": [
         {
-            "Nome": "Dott. Smith",
-            "Relazione": "Medico di Famiglia",
-            "Numero di Telefono": "555-1234",
-            "Email": "dr.smith@example.com",
-            "Indirizzo": "123 Health St, Wellness City",
-            "Note": "Pianificare il controllo annuale."
+            "Nome": "Dr. Rossi",
+            "Relazione": "Pediatra",
+            "Numero di Telefono": "+39 123 456 7890",
+            "Email": "rossi@studio.it",
+            "Indirizzo": "Via Medici 10, Milano",
+            "Note": "Pediatra di Niccolò."
         }
     ],
     "Tradizioni Familiari": [
         {
-            "Nome Tradizione": "Cena di Ringraziamento",
-            "Descrizione": "Riunire la famiglia per un grande banchetto.",
-            "Frequenza": "Annuale",
-            "Note": "Ognuno porta un piatto."
+            "Nome Tradizione": "Pizza del sabato",
+            "Descrizione": "Preparare la pizza in casa ogni sabato sera.",
+            "Frequenza": "Settimanale",
+            "Note": "Niccolò sceglie i condimenti."
         }
     ],
     "Obiettivi e Progetti Familiari": [
         {
-            "Nome Obiettivo/Progetto": "Ristrutturazione della Casa",
-            "Descrizione": "Ristrutturare la cucina e i bagni.",
-            "Membro della Famiglia Assegnato(i)": "Bob, Charlie",
-            "Data di Inizio": "2023-11-01",
-            "Data di Fine": "2024-03-01",
-            "Stato": "In Corso",
-            "Note": "Budget: $10,000."
+            "Nome Obiettivo/Progetto": "Risparmio per vacanza",
+            "Descrizione": "Mettere da parte 2000€ per una vacanza estiva.",
+            "Membro della Famiglia Assegnato(i)": "Mamma, Papà",
+            "Data di Inizio": "01/01/2025",
+            "Data di Fine": "31/12/2025",
+            "Stato": "In corso",
+            "Note": "Controllare il budget mensile."
         }
     ],
-    "Cura degli Animali Domestici": [
+    "Nuove Attività Fatte da Niccolò": [
         {
-            "Nome Animale": "Buddy",
-            "Tipo": "Cane",
-            "Razza": "Golden Retriever",
-            "Et\u00e0": "5 anni",
-            "Istruzioni di Cura": "Portare a passeggio due volte al giorno, nutrirlo due volte al giorno.",
-            "Contatto Veterinario": "555-5678",
-            "Note": "Ha bisogno di toelettatura ogni mese."
+            "Nome Attività": "Disegno di una nave",
+            "Data": "07/10/2025",
+            "Descrizione": "Niccolò ha disegnato una nave pirata con pastelli.",
+            "Tempo Impiegato": 45,
+            "Note": "Usato colori blu e rosso.",
+            "Completata": "Sì"
         }
     ],
     "Informazioni di Emergenza": [
         {
             "Tipo Emergenza": "Incendio",
-            "Descrizione Piano": "Evacuare verso l'uscita pi\u00f9 vicina.",
-            "Numeri di Contatto": "911",
-            "Posizione delle Forniture": "Cassetto della Cucina",
-            "Note": "Controllare i rilevatori di fumo mensilmente."
+            "Descrizione Piano": "Uscire dalla porta principale, radunarsi al parco vicino.",
+            "Numeri di Contatto": "+39 112, +39 123 456 7890",
+            "Posizione delle Forniture": "Cucina, armadio di sicurezza",
+            "Note": "Estintore in cucina."
         }
     ],
     "Cartelle Sanitarie Familiari": [
         {
-            "Nome Membro della Famiglia": "Bob",
-            "Condizione Sanitaria": "Asma",
-            "Medicina": "Inalatore",
-            "Medico": "Dott. Smith",
-            "Date degli Appuntamenti": "2023-09-15",
-            "Note": "Portare sempre l'inalatore."
+            "Nome Membro della Famiglia": "Niccolò",
+            "Condizione Sanitaria": "Nessuna",
+            "Medicina": "Nessuna",
+            "Medico": "Dr. Rossi",
+            "Date degli Appuntamenti": "15/11/2025",
+            "Note": "Controllo pediatrico annuale."
         }
     ],
     "Piani di Viaggio": [
         {
-            "Destinazione": "Florida",
-            "Date": "2024-07-01 a 2024-07-10",
-            "Alloggio": "Resort sulla Spiaggia",
-            "Trasporto": "Volo",
-            "Itinerario": "Visita ai parchi a tema e alle spiagge.",
-            "Lista di Cose da Portare": "Crema solare, costumi da bagno, cappelli",
-            "Note": "Prenotare i biglietti in anticipo."
+            "Destinazione": "Firenze",
+            "Date": "20/12/2025",
+            "Alloggio": "Hotel Centrale",
+            "Trasporto": "Treno",
+            "Itinerario": "Visita agli Uffizi e Ponte Vecchio.",
+            "Lista di Cose da Portare": "Vestiti caldi, macchina fotografica",
+            "Note": "Prenotare biglietti museo in anticipo."
+        }
+    ],
+    "Attività di Trading": [
+        {
+            "Simbolo": "TSLA",
+            "Data del Trade": "07/10/2025",
+            "Tipo": "long",
+            "Ragione del Trade": "Forte crescita prevista dopo lancio prodotto.",
+            "Quantità": 20,
+            "Prezzo di Ingresso": 250.75,
+            "Prezzo di Uscita": 0.0,
+            "Profitto/Perdita": 0.0,
+            "Note": "Monitorare news su Tesla."
+        }
+    ],
+    "Progetti IT": [
+        {
+            "Nome Progetto": "Algo Trading Bot",
+            "Descrizione": "Sviluppare un bot per trading automatico usando Python e Databricks.",
+            "Tecnologie": ["Python", "Pandas", "Databricks"],
+            "Data di Inizio": "01/10/2025",
+            "Data di Fine": "",
+            "Stato": "In corso",
+            "Obiettivo": "Automatizzare trades basati su analisi tecnica.",
+            "Risultati": "Prototipo completato.",
+            "Repository": "github.com/user/algo-trading-bot",
+            "Note": "Testare su dati storici."
+        }
+    ],
+    "Note Libere": [
+        {
+            "Titolo Nota": "Idea per trading",
+            "Data": "07/10/2025",
+            "Testo": "Esplorare l'uso di LLM per prevedere trend di mercato basati su news.",
+            "Tag": ["trading", "LLM", "ricerca"],
+            "Note Aggiuntive": "Studiare LangChain per integrazione."
         }
     ]
 }
